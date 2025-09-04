@@ -37,8 +37,47 @@ export class NavBarComponent {
     @Inject(DOCUMENT) private doc: Document
   ) {}
 
-  loginWithRedirect() {
+  loginWithRedirect(email?: string) {
+    // Connection mapping for different domains/scenarios
+    const connectionMap: { [key: string]: string } = {
+      'p2es.com': 'p2devop-dev-aad',     // B2B guests from p2es.com
+      'p2devops.com': 'p2devop-dev-aad', // Native p2devops users
+    };
+
+    // If email is provided, determine the connection based on domain
+    if (email) {
+      const domain = email.split('@')[1];
+      const connection = connectionMap[domain];
+      
+      if (connection) {
+        // Force specific enterprise connection
+        this.auth.loginWithRedirect({
+          authorizationParams: {
+            connection: connection,
+            login_hint: email,
+            domain_hint: domain
+          }
+        });
+        return;
+      }
+    }
+    
+    // Default behavior - let Auth0 determine the connection
     this.auth.loginWithRedirect();
+  }
+  
+  // Quick method for testing B2B guest login
+  loginAsB2BGuest() {
+    this.loginWithRedirect('jxc0116@p2es.com');
+  }
+  
+  // Method to force specific connection (for testing)
+  loginWithConnection(connectionName: string) {
+    this.auth.loginWithRedirect({
+      authorizationParams: {
+        connection: connectionName
+      }
+    });
   }
 
   logout() {

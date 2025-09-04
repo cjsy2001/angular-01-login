@@ -1,0 +1,92 @@
+{
+    "version": 4,
+    "terraform_version": "0.12.31",
+    "serial": 144,
+    "lineage": "09b884fd-7863-966a-6a02-d80971f1e6f8",
+    "outputs": {
+        "api_mgmt": {
+            "value": {
+                "id": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx",
+                "name": "test-api-904srx",
+                "public_ip_addresses": [
+                    "40.71.194.199"
+                ]
+            },
+            "type": [
+                "object", {
+                    "id": "string",
+                    "name": "string",
+                    "public_ip_addresses": [
+                        "list",
+                        "string"
+                    ]
+                }
+            ]
+        },
+        "api_mgmt_dns_name": {
+            "value": "api-test.p2devops.com",
+            "type": "string"
+        },
+        "api_mgmt_group": {
+            "value": {
+                "internal_id": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx/groups/internal",
+                "internal_name": "internal"
+            },
+            "type": [
+                "object", {
+                    "internal_id": "string",
+                    "internal_name": "string"
+                }
+            ]
+        },
+        "api_mgmt_group_internal_id": {
+            "value": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx/groups/internal",
+            "type": "string"
+        },
+        "api_mgmt_group_internal_name": {
+            "value": "internal",
+            "type": "string"
+        },
+        "api_mgmt_id": {
+            "value": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx",
+            "type": "string"
+        },
+        "api_mgmt_ip_addresses": {
+            "value": [
+                "40.71.194.199"
+            ],
+            "type": [
+                "list",
+                "string"
+            ]
+        },
+        "api_mgmt_name": {
+            "value": "test-api-904srx",
+            "type": "string"
+        },
+        "api_mgmt_product": {
+            "value": {
+                "internal_id": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx/products/Internal",
+                "internal_nam": "Internal"
+            },
+            "type": [
+                "object", {
+                    "internal_id": "string",
+                    "internal_nam": "string"
+                }
+            ]
+        },
+        "api_mgmt_product_internal_id": {
+            "value": "/subscriptions/37550a7b-6e3d-4192-967c-66c14d9373ca/resourceGroups/test-api-mgmt-rg/providers/Microsoft.ApiManagement/service/test-api-904srx/products/Internal",
+            "type": "string"
+        },
+        "api_mgmt_product_internal_name": {
+            "value": "Internal",
+            "type": "string"
+        },
+        "resource_group_name": {
+            "value": "test-api-mgmt-rg",
+            "type": "string"
+        }
+    },
+}
